@@ -1,0 +1,18 @@
+{% extends 'paginas/loginCasal.html' %}
+{% load static %}
+
+{% block titulo %}
+    <title>Tela de Cadastro de Login</title>
+{% endblock %}
+
+{% block logins %}
+<form action="" method="POST">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <button type="submit" class="btn btn-primary">Cadastrar</button>
+
+</form>
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% load static %}
+
+<html>
+  <head>
+    {% block titulo %}
+    <title>Meu Formulário Personalizado</title>
+    {% endblock %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/logincasal.css' %}">
+  </head>
+<body>
+  {% block logins %}
+  <div>
+    <form autocomplete="off">
+      <fieldset>
+        {% block legenda %}
+        <legend class="badge badge-primary" >Login Casal</legend>
+        {% endblock %}
+        <label>Email:</label><input class="campo_email" type="text"><br>
+        
+        <label>Senha:</label><input class="campo_senha" type="password"><br>
+  
+        <a href="{% url 'loginusuario' %}" class="button">Enviar</a>
+      </fieldset>
+    </form>
+  </div>
+  {% endblock %}
+</body>
